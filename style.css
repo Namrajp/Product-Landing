@@ -1,0 +1,140 @@
+/** global element styling **/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+ font: Arial, sans-serif;
+}
+
+.page-wrap {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  height: 660px;
+  left: 20px;
+  background-color: #fff;
+}
+#header-img {
+  position: absolute;
+  left: 20px;
+}
+#nav-bar {
+  position: fixed;
+  left: 230px;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+nav ul {
+  background-color: #336699;
+  padding: 5px;
+  bottom: 30px;
+  width: 500px;
+}
+.container li {
+  list-style-type: none;
+  padding: 15px;
+  display: inline;
+}
+.container li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.addr-text {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 190px;
+  color: #336699;
+}
+.addr-text hr:first-child {
+  border: 5px solid #336699;
+  margin: 2px;
+}
+.addr-text hr:nth-child(2) {
+  background: #336699;
+  height: 3px;
+  margin: 2px;
+}
+.addr-text hr:nth-child(3) {
+  background: #336699;
+  height: 2px;
+  margin: 2px;
+}
+#main-content {
+  position: relative;
+  top: 150px;
+  width: 600px;
+}
+
+.img-responsive:first-child {
+  float: left;
+  margin: 15px;
+}
+
+div.post:nth-child(2) .img-responsive {
+  float: right;
+}
+div.post:nth-child(3) .img-responsive {
+  float: left;
+}
+div.post {
+  display: block;
+  margin-bottom: 40px;
+}
+footer p {
+  text-align: center;
+  margin-top: 200px;
+}
+
+/** global classes styling **/
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  display: block;
+  padding: 10px 20px;
+  margin: 5px;
+
+}
+h2 {
+  background-color: rgba(33,66,99,0.2);
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 5px;
+  margin: 20px auto;
+  background: transparent;
+  cursor: pointer;
+}
+
+#how-it-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 45px 0px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+
