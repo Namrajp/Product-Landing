@@ -6,7 +6,7 @@
 }
 body {
   margin: 0;
- font: Arial, sans-serif;
+  font: Arial, sans-serif;
 }
 
 .page-wrap {
@@ -23,7 +23,7 @@ body {
 }
 #nav-bar {
   position: fixed;
-  left: 230px;
+  left: 270px;
 }
 .container {
   width: 800px;
@@ -104,10 +104,9 @@ footer p {
   display: block;
   padding: 10px 20px;
   margin: 5px;
-
 }
 h2 {
-  background-color: rgba(33,66,99,0.2);
+  background-color: rgba(33, 66, 99, 0.2);
   margin-bottom: 10px;
 }
 
@@ -131,10 +130,18 @@ h2 {
   margin: 45px 0px;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   header {
     flex-wrap: wrap;
   }
+} */
+
+/* @media (min-width: 960px) {
+  .col-4 {
+    width: 33%;
+  }
+} */
+
+form {
+  text-align: center;
 }
-
-
