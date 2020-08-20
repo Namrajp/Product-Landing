@@ -8,8 +8,13 @@
 body {
   margin: 0;
   font: Arial, sans-serif;
+  font-size: 18px;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
 header {
   background-color: #fff;
   display: flex;
@@ -31,7 +36,8 @@ header {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.5rem;
+  font-weight: 600;
   align-self: center;
 }
 /* Change the color of links on hover */
@@ -238,13 +244,23 @@ header {
         .post p {
           padding: 5px;
         }
-     
-
-
+        .btn {
+          padding: 10px 20px;
+          height: 40px;
+          font-size: 1em;
+          font-weight: 900;
+          text-transform: uppercase;
+          border: 3px black solid;
+          border-radius: 5px;
+          margin: 20px auto;
+          background: transparent;
+          cursor: pointer;
+}
     
 footer p {
-  text-align: center;
+  text-align: right;
   margin-top: 20px;
+  color: red;
 }
 
 /** global classes styling **/

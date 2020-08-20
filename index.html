@@ -8,6 +8,7 @@
   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -16,15 +17,17 @@
     </div>
 
     <div class="topnav" id="myTopnav">
-      <a href="#home" class="active">Bike</a>
-      <a href="#news">Helmet</a>
-      <a href="#contact">Gloves</a>
-      <a href="#about">Scooters</a>
+      <a href="#bike" class="active">Bike</a>
+      <a href="#helmet">Helmet</a>
+      <a href="#gloves">Gloves</a>
+      <a href="#scooters">Scooters</a>
+      <a href="#access">Accessories</a>
+
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
-
+    <span id="top"></span>
     <div class="col-sm col-4 address">
           <hr />
           <hr />
@@ -36,6 +39,7 @@
 
     <section class="form-div container">
         <h2>Subscribe our newsletter to Submit your interest</h2>
+
         <form id="form" action="https://www.freecodecamp.com/email-submit">
           <label for="email"
             >Name
@@ -52,7 +56,7 @@
       </section>
 
       <div id="main-content" class="container main-content">
-        <h2>Bikes and Helmets</h2>
+        <h2 id='helmet'>Bikes and Helmets</h2>
         <div class="post">
           <img class="img-responsive" src="images/bike.jpg" alt="" /><p>rem ipsum
           dolor sit amet consectetur adipisicing elit. Sit possimus dolor sunt,
@@ -64,7 +68,7 @@
         </div>
 
         <h2>Accessories and Gloves</h2>
-        <div class="post">
+        <div id="gloves" class="post">
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
           dolores iusto corporis deserunt rerum laboriosam error ipsa et
           asperiores, dolore porro iure tenetur explicabo aperiam illo autem
@@ -75,9 +79,9 @@
         </div>
 
         <h2>Scooters</h2>
-        <div class="post">
+        <div id="scooters" class="post">
           <img class="img-responsive" src="images/scooters.jpg" alt="" />
-          <p>Lorem
+          <p id="access">Lorem
           ipsum dolor sit amet consectetur adipisicing elit. Magni delectus
           rerum doloribus debitis a mollitia eligendi modi placeat natus
           voluptate in, facere ipsam voluptates perspiciatis commodi qui officia
@@ -100,6 +104,7 @@
       <footer class="container">
         <p>
           &copy; Copyrights 2020 Namraj Bike Web Page design
+          <br><a href="#top">Navigate Top</a>
         </p>
       </footer>
 
@@ -115,8 +120,14 @@
       x.className = "topnav";
     }
   }
-
-  
 </script>
+<script>
+  $( '#myTopnav a' ).on( 'click', function () {
+  $( '#myTopnav' ).find( 'a.active' ).removeClass( 'active' );
+  $( this ).addClass( 'active' );
+});
+</script>
+
+
 </body>
 </html>
