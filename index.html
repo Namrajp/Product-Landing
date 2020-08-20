@@ -1,187 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>text-align</title>
-    <style>
-      /** global element styling **/
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="col-xs col-4">
+        <img src="images/bikeTopImage.jpg" alt="" />
+    </div>
 
-      @import "https://fonts.googleapis.com/css?family=Lato:400,700";
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Bike</a>
+      <a href="#news">Helmet</a>
+      <a href="#contact">Gloves</a>
+      <a href="#about">Scooters</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: #336699;
-        font-family: "Lato", sans-serif;
-      }
-      header {
-        display: flex;
-      }
-      .col-4 {
-        /* background: linear-gradient(45deg, yellow, dodgerblue, red); */
-        width: 33%;
-        height: 160px;
-        text-align: center;
-        margin: 0 auto;
-        float: left;
-      }
-      .col-xs {
-        width: 15%;
-      }
-      .col-sm {
-        width: 25%;
-      }
-      .col-md {
-        width: 60%;
-      }
-      @media (max-width: 660px) {
-        header {
-          display: block;
-        }
-        .col-4 {
-          width: 100%;
-          margin: auto;
-        }
-      }
-      .form-div h2 {
-        text-align: center;
-      }
-      section #form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 40px 50px;
-      }
-      #form input[type="email"] {
-        width: 300px;
-        margin-bottom: 5px;
-      }
-      #form input[type="submit"] {
-        transition: background-color 0.5s, color 0.5s linear,
-          border-radius 2s ease-out;
-        background-color: #139cff;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        border-radius: 7px;
-        display: inline-block;
-        font-family: helvetica;
-      }
-      #form input[type="submit"]:hover {
-        background-color: #35ec5c;
-        color: black;
-        border-radius: 30px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-      }
-      .nav {
-        display: flex;
-        justify-content: space-around;
-        background: #336699;
-        max-width: 100%;
-      }
-      .nav li {
-        list-style-type: none;
-        display: inline;
-        padding: 7px;
-        /* overflow: hidden; */
-      }
-      .nav li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.3rem;
-      }
-      .nav li a:hover {
-        color: #fff;
-        opacity: 0.7;
-      }
-      .addr-text hr:first-child {
-        border: 5px solid #336699;
-        margin: 2px;
-      }
-      .addr-text {
-        color: #336699;
-      }
-      .addr-text hr:nth-child(2) {
-        background: #336699;
-        height: 3px;
-        margin: 2px;
-      }
-      .addr-text hr:nth-child(3) {
-        background: #336699;
-        height: 2px;
-        margin: 2px;
-      }
-      #main-content h2 {
-        background-color: rgba(33, 66, 99, 0.2);
-        margin-bottom: 10px;
-        padding: 5px;
-      }
-      .post {
-        display: flex;
-        flex-direction: row-reverse;
-        margin-bottom: 25px;
-        text-align: justify;
-      }
-      .img-responsive {
-        max-width: 100%;
-        height: auto;
-        margin: 15px;
-        border-radius: 5px;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      .page-wrap {
-        width: 100%;
-        max-width: 980px;
-        margin: 0 auto;
-        margin-top: 0px;
-        background-color: #ffffff;
-      }
-      footer p {
-        text-align: center;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="page-wrap">
-      <header>
-        <div class="col-xs col-4">
-          <img src="images/bikeTopImage.jpg" alt="" />
-        </div>
-        <div class="col-md col-4 navbar container">
-          <ul class="nav">
-            <li><a class="nav-link" href="#">Bike</a></li>
-            <li><a class="nav-link" href="#">Helmet</a></li>
-            <li><a class="nav-link" href="#">Accessories</a></li>
-            <li><a class="nav-link" href="#">Gloves</a></li>
-            <li><a class="nav-link" href="#">Scooters</a></li>
-          </ul>
-        </div>
-        <div class="col-sm col-4 addr-text">
+    <div class="col-sm col-4 address">
           <hr />
           <hr />
           <hr />
           <h2>Perfect Bikes</h2>
           <p>25 Some street, State nsw<br />ph 09878687, mob: 045464476</p>
         </div>
-      </header>
+  </header>
 
-      <section class="form-div container">
+    <section class="form-div container">
         <h2>Subscribe our newsletter to Submit your interest</h2>
         <form id="form" action="https://www.freecodecamp.com/email-submit">
           <label for="email"
@@ -198,38 +49,40 @@
         </form>
       </section>
 
-      <div id="main-content" class="container">
+      <div id="main-content" class="container main-content">
         <h2>Bikes and Helmets</h2>
         <div class="post">
-          <img class="img-responsive" src="images/bike.jpg" alt="" />Lorem ipsum
+          <img class="img-responsive" src="images/bike.jpg" alt="" /><p>rem ipsum
           dolor sit amet consectetur adipisicing elit. Sit possimus dolor sunt,
           odio quia voluptatum incidunt quas, perferendis fugiat provident rerum
           libero expedita officia. Necessitatibus animi amet officia magni
           tenetur laboriosam. Nostrum possimus alias iusto molestiae, ducimus
           consequatur, commodi, ut cumque tenetur aut molestias autem libero
-          dolorum. Incidunt, laboriosam officia?
+          dolorum. Incidunt, laboriosam officia?</p>
         </div>
 
         <h2>Accessories and Gloves</h2>
         <div class="post">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
           dolores iusto corporis deserunt rerum laboriosam error ipsa et
           asperiores, dolore porro iure tenetur explicabo aperiam illo autem
           eveniet. Sequi quia perferendis distinctio enim. Est unde quam atque,
           iste vel dolorem sunt, laudantium, animi delectus magnam velit quaerat
-          consectetur vero repellat!
+          consectetur vero repellat!</p>
           <img class="img-responsive" src="images/helmet.jpg" alt="" />
         </div>
 
         <h2>Scooters</h2>
         <div class="post">
-          <img class="img-responsive" src="images/scooters.jpg" alt="" />Lorem
+          <img class="img-responsive" src="images/scooters.jpg" alt="" />
+          <p>Lorem
           ipsum dolor sit amet consectetur adipisicing elit. Magni delectus
           rerum doloribus debitis a mollitia eligendi modi placeat natus
           voluptate in, facere ipsam voluptates perspiciatis commodi qui officia
           ipsum totam porro, atque illum temporibus id quo! Accusantium magni
           minima tenetur earum et, ea obcaecati voluptatem sint, deserunt rem
-          quae alias.
+          quae alias.</p>
+          
         </div>
         <section id="how-it-works">
           <iframe
@@ -242,13 +95,26 @@
           ></iframe>
         </section>
       </div>
-      <!-- main-content -->
       <footer class="container">
         <p>
           &copy; Copyrights 2020 Namraj Bike Web Page design
         </p>
       </footer>
-    </div>
-    <!-- page-wrap -->
-  </body>
+
+
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById('myTopnav');
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+  
+</script>
+</body>
 </html>
